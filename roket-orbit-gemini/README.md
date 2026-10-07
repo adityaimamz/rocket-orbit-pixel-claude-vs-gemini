@@ -62,14 +62,21 @@ npm run stills
 # atau: node render.mjs stills
 ```
 
-### 4. Uji Determinisme Animasi
+### 4. Membuat Contact Sheet
+Menggabungkan semua still kunci menjadi lembar kontak (contact sheet grid 4x2) ke `out/sheet.png`:
+```bash
+npm run sheet
+# atau: node tools/sheet.mjs
+```
+
+### 5. Uji Determinisme Animasi
 Memastikan animasi `f(t)` menghasilkan piksel 100% identik di setiap detik pengujian:
 ```bash
 npm run check
 # atau: node render.mjs check
 ```
 
-### 5. Render Video Akhir (MP4)
+### 6. Render Video Akhir (MP4)
 Merender 360 frame secara headless dan menggabungkannya bersama audio menjadi MP4:
 ```bash
 npm run render

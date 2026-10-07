@@ -9,7 +9,8 @@
     "render": "node render.mjs video",
     "stills": "node render.mjs stills",
     "audio": "node render.mjs audio",
-    "check": "node render.mjs check"
+    "check": "node render.mjs check",
+    "sheet": "node tools/sheet.mjs"
   },
   "dependencies": {
     "playwright": "^1.56.0"

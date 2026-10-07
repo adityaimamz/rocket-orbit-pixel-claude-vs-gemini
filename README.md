@@ -13,8 +13,11 @@
 | **S2: Lepas Landas & Atmosfer (4–8s)** | ![Claude Liftoff](previews/claude-liftoff.png) | ![Gemini Liftoff](previews/gemini-liftoff.png) |
 | **S3: Orbit & Mission Start (8–12s)** | ![Claude Orbit](previews/claude-orbit.png) | ![Gemini Orbit](previews/gemini-orbit.png) |
 
-### Contact Sheet (Claude)
-![Claude Contact Sheet](previews/claude-sheet.png)
+### Contact Sheet Komparasi
+
+| Claude (Opus 5.5) | Gemini (3.8 Flash) |
+| :---: | :---: |
+| ![Claude Contact Sheet](previews/claude-sheet.png) | ![Gemini Contact Sheet](previews/gemini-sheet.png) |
 
 ---
 
@@ -96,6 +99,9 @@ npm run check
 
 # Ekspor still kunci resolusi penuh (1080x1920)
 npm run stills
+
+# Buat contact sheet dari still (out/sheet.png)
+npm run sheet
 
 # Sintesis audio BGM chiptune + SFX
 npm run audio
