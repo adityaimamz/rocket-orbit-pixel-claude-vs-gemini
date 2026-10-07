@@ -5,6 +5,34 @@
 
 ---
 
+## 📝 Prompt Eksperimen
+
+Prompt yang sama persis diberikan ke kedua model (**Claude Opus 5.5** dan **Gemini 3.8 Flash**) dalam satu kali jalan tanpa revisi manual:
+
+```text
+Buat video animasi pixel art vertikal berdurasi 12 detik, sepenuhnya dari kode.
+
+Tema: peluncuran roket kecil dari bumi ke orbit.
+
+Struktur 3 adegan:
+1. (0-4 dtk) Landasan peluncuran saat senja. Hitung mundur 3-2-1 sebagai teks pixel di layar. Asap kecil keluar dari dasar roket.
+2. (4-8 dtk) Roket lepas landas. Kamera mengikuti ke atas, langit berubah dari oranye ke biru tua lalu hitam. Bintang mulai muncul.
+3. (8-12 dtk) Roket mencapai orbit. Planet besar di latar, bintang berkelip, teks pixel "MISSION START" muncul dengan efek ketik.
+
+Ketentuan teknis:
+- Murni HTML Canvas 2D, tanpa library, gambar, atau aset eksternal.
+- Resolusi internal 270x480, ditampilkan 1080x1920 dengan nearest-neighbor (piksel tajam, tidak blur).
+- 30 fps, 360 frame. Semua animasi digerakkan oleh waktu (fungsi drawFrame(t)) supaya hasil render konsisten setiap dijalankan.
+- Render frame demi frame dengan Playwright headless Chromium, lalu gabungkan jadi MP4 dengan ffmpeg.
+- Palet warna terbatas (maksimal 16 warna) dan konsisten antar adegan.
+- Tambahkan musik latar sederhana dan efek suara peluncuran yang dibuat dari kode, lalu gabungkan ke video.
+
+Keluaran akhir: file source code siap render dan petunjuk cara menjalankannya.
+Jalankan sendiri, periksa hasilnya, dan perbaiki jika ada error sebelum menyerahkan.
+```
+
+---
+
 ## 🚀 Perbandingan Hasil Visual
 
 | Adegan | Claude (Opus 5.5) | Gemini (3.8 Flash) |
