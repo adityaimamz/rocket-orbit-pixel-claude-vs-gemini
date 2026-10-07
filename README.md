@@ -5,10 +5,11 @@
 
 ---
 
-## 📝 Prompt Eksperimen
+## 📝 Prompt Eksperimen / Experiment Prompt
 
 Prompt yang sama persis diberikan ke kedua model (**Claude Opus 5.5** dan **Gemini 3.8 Flash**) dalam satu kali jalan tanpa revisi manual:
 
+### 🇮🇩 Versi Bahasa Indonesia (Asli)
 ```text
 Buat video animasi pixel art vertikal berdurasi 12 detik, sepenuhnya dari kode.
 
@@ -29,6 +30,29 @@ Ketentuan teknis:
 
 Keluaran akhir: file source code siap render dan petunjuk cara menjalankannya.
 Jalankan sendiri, periksa hasilnya, dan perbaiki jika ada error sebelum menyerahkan.
+```
+
+### 🇬🇧 English Translation
+```text
+Create a 12-second vertical pixel art animation video, generated entirely from code.
+
+Theme: small rocket launch from Earth into orbit.
+
+3-scene structure:
+1. (0-4s) Launch pad at dusk. 3-2-1 countdown as pixel text on screen. Small smoke billowing from the rocket base.
+2. (4-8s) Rocket lift-off. Camera tracks upward, sky transitions from orange to dark blue then black. Stars begin to appear.
+3. (8-12s) Rocket reaches orbit. Large planet in background, twinkling stars, pixel text "MISSION START" appears with a typewriter effect.
+
+Technical requirements:
+- Pure HTML Canvas 2D, no libraries, images, or external assets.
+- Internal resolution of 270x480, displayed at 1080x1920 using nearest-neighbor (sharp pixels, no blur).
+- 30 fps, 360 frames. All animations driven by time (drawFrame(t) function) so render output is consistent on every run.
+- Render frame-by-frame using Playwright headless Chromium, then combine into an MP4 with ffmpeg.
+- Limited color palette (max 16 colors), consistent across scenes.
+- Add simple procedural background music and launch sound effects generated from code, then multiplex into the video.
+
+Final deliverable: ready-to-render source code files and instructions on how to run them.
+Run it yourself, verify the results, and fix any errors before submitting.
 ```
 
 ---
