@@ -1,0 +1,17 @@
+{
+  "name": "roket-orbit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Peluncuran roket kecil dari bumi ke orbit — video animasi pixel art 12s Canvas2D murni.",
+  "scripts": {
+    "preview": "node render.mjs serve",
+    "render": "node render.mjs video",
+    "stills": "node render.mjs stills",
+    "audio": "node render.mjs audio",
+    "check": "node render.mjs check"
+  },
+  "dependencies": {
+    "playwright": "^1.56.0"
+  }
+}

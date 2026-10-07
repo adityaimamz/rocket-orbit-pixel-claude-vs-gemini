@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peluncuran Roket ke Orbit — Pixel Art Canvas 2D</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  background: #05050d;
+  color: #fcfbe3;
+  font-family: system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+  height: 100vh;
+}
+#c {
+  display: block;
+  width: 1080px;
+  height: 1920px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+body.preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #0c0e17;
+}
+body.preview #c {
+  height: calc(100vh - 120px);
+  width: auto;
+  aspect-ratio: 9/16;
+  box-shadow: 0 0 0 1px #1f2c4c, 0 16px 40px rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+}
+#ui {
+  display: none;
+  width: min(720px, 94vw);
+  background: #121528;
+  border: 1px solid #1f2c4c;
+  border-radius: 10px;
+  padding: 10px 16px;
+}
+body.preview #ui {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+#play {
+  background: #2563eb;
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  height: 32px;
+  padding: 0 16px;
+  font: 600 13px system-ui;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+#play:hover { background: #3b82f6; }
+#bar {
+  flex: 1;
+  accent-color: #4cd3b2;
+  cursor: pointer;
+}
+#time {
+  font: 500 12px monospace;
+  color: #9babb2;
+  min-width: 170px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.scene-btns {
+  display: flex;
+  gap: 8px;
+}
+.scene-btns button {
+  background: #1f2c4c;
+  color: #fcfbe3;
+  border: 1px solid #364f6b;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font: 500 11px system-ui;
+  cursor: pointer;
+}
+.scene-btns button:hover {
+  background: #364f6b;
+  color: #4cd3b2;
+}
+#hint {
+  font: 400 11px system-ui;
+  color: #52606d;
+}
+</style>
+</head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<div id="ui">
+  <div class="row">
+    <button id="play">Play (Space)</button>
+    <input id="bar" type="range" min="0" max="12.0" step="0.0333" value="0">
+    <span id="time">0.00s / 12.0s</span>
+  </div>
+  <div class="row" style="justify-content: space-between;">
+    <div class="scene-btns">
+      <button id="btn-s1">S1: Landasan (0s)</button>
+      <button id="btn-s2">S2: Lepas Landas (4s)</button>
+      <button id="btn-s3">S3: Orbit (8s)</button>
+    </div>
+    <div id="hint">Space: play/pause | &larr; / &rarr;: &plusmn;0.5s | , / .: 1 frame</div>
+  </div>
+</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>

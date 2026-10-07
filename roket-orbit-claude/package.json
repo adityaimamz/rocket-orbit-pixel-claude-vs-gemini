@@ -1,0 +1,18 @@
+{
+  "name": "roket-orbit-claude",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Roket kecil dari bumi ke orbit: video pixel art vertikal 12 s, Canvas2D murni, audio sintetis.",
+  "scripts": {
+    "preview": "node tools/serve.mjs",
+    "stills": "node tools/render.mjs 15 60 105 130 165 195 225 255 285 330 359",
+    "frames": "node tools/render.mjs",
+    "audio": "node tools/audio.mjs",
+    "check": "node tools/check.mjs",
+    "build": "node tools/build.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.56.0"
+  }
+}

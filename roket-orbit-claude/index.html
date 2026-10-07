@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roket Orbit</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #111; color: #ddd; font: 13px/1.4 monospace; }
+  body { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
+  #fb { display: none; }
+  /* kanvas tampil 1080x1920; diperkecil agar muat layar, tetap tajam */
+  #view { height: calc(100vh - 70px); aspect-ratio: 9 / 16; image-rendering: pixelated; background: #000; }
+  #ui { display: flex; gap: 10px; align-items: center; width: min(540px, 90vw); }
+  #seek { flex: 1; }
+  body.render { display: block; background: #000; }
+  body.render #ui { display: none; }
+  body.render #view { height: auto; }
+</style>
+</head>
+<body>
+<canvas id="fb"></canvas>
+<canvas id="view"></canvas>
+<div id="ui">
+  <button id="play">Play</button>
+  <input id="seek" type="range" min="0" value="0">
+  <span id="label"></span>
+</div>
+<script>
+  if (new URLSearchParams(location.search).has('render')) {
+    document.body.classList.add('render');
+    document.getElementById('ui').remove();
+  }
+</script>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
