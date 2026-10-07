@@ -1,13 +1,13 @@
 # Rocket Orbit Pixel — Claude vs Gemini
 
 > **Eksperimen Animasi Motion Graphics Pixel Art Vertikal (9:16) Murni Berbasis Kode**  
-> Perbandingan implementasi antara **Claude** dan **Gemini** dalam membuat video animasi pixel art 12 detik peluncuran roket dari bumi ke orbit secara deterministik $f(t)$ menggunakan HTML5 Canvas 2D + Web Audio API / PCM synthesis tanpa aset gambar maupun pustaka grafis eksternal.
+> Perbandingan implementasi antara **Claude (Opus 5.5)** dan **Gemini (3.8 Flash)** dalam membuat video animasi pixel art 12 detik peluncuran roket dari bumi ke orbit secara deterministik $f(t)$ menggunakan HTML5 Canvas 2D + Web Audio API / PCM synthesis tanpa aset gambar maupun pustaka grafis eksternal.
 
 ---
 
 ## 🚀 Perbandingan Hasil Visual
 
-| Adegan | Claude 3.7 Sonnet | Gemini 3.8 Flash |
+| Adegan | Claude (Opus 5.5) | Gemini (3.8 Flash) |
 | :--- | :---: | :---: |
 | **S1: Hitung Mundur (0–4s)** | ![Claude Countdown](previews/claude-countdown.png) | ![Gemini Countdown](previews/gemini-countdown.png) |
 | **S2: Lepas Landas & Atmosfer (4–8s)** | ![Claude Liftoff](previews/claude-liftoff.png) | ![Gemini Liftoff](previews/gemini-liftoff.png) |
@@ -20,7 +20,7 @@
 
 ## 📊 Matriks Perbandingan Fitur
 
-| Kriteria / Fitur | Implementasi Claude (`roket-orbit-claude`) | Implementasi Gemini (`roket-orbit-gemini`) |
+| Kriteria / Fitur | Claude Opus 5.5 (`roket-orbit-claude`) | Gemini 3.8 Flash (`roket-orbit-gemini`) |
 | :--- | :--- | :--- |
 | **Resolusi Internal** | 270 × 480 (Canvas 2D) | 270 × 480 (Canvas 2D) |
 | **Resolusi Output** | 1080 × 1920 (4x upscale, nearest-neighbor) | 1080 × 1920 (4x upscale, nearest-neighbor) |
